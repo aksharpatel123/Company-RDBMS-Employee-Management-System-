@@ -21,24 +21,18 @@ def WorksOn_csv():
 def Project_csv():
     colNames = ['Name', 'ProjectNo', 'loc', 'DeptNo']
     data = pd.read_csv('PROJECT.txt', delimiter=', ', names = colNames, engine='python')
-    # replacing the columns with null :
-    # print(data.isnull().sum())
     newDataFile = data.fillna(value='NULL')
     newDataFile.to_csv('PROJECT.csv', index = False)
 
 def DepLocation_csv():
     colNames = ['DeptNo', 'loc']
     data = pd.read_csv('DEPT_LOCATIONS.txt', delimiter=', ', names = colNames, engine='python')
-    # replacing the columns with null :
-    # print(data.isnull().sum())
     newDataFile = data.fillna(value='NULL')
     newDataFile.to_csv('DEPT_LOCATIONS.csv', index = False)
 
 def Department():
     colNames = ['Name', 'loc', 'ManagerNo', 'startDate']
     data = pd.read_csv('DEPARTMENT.txt', delimiter=', ', names = colNames, engine='python')
-    # replacing the columns with null :
-    # print(data.isnull().sum())
     newDataFile = data.fillna(value='NULL')
     newDataFile.to_csv('DEPARTMENT.csv', index = False)
 
